@@ -1,0 +1,8 @@
+
+.formchild{
+    display: grid;
+    justify-content: left;
+    
+    row-gap: 2px;
+
+}

@@ -1,0 +1,369 @@
+.mainContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vm;
+}
+
+div {
+  border: 0px solid rgb(0, 0, 0);
+}
+
+.SearchBar {
+
+  padding-bottom: 10px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 64px;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultContainer,
+.historyItem {
+  flex-direction: row;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.historyContainer {
+  flex-direction: column;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  flex-grow: 5;
+  justify-content: flex-start;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  height: 100px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inputContainer>.errorLabel {
+  color: red;
+  font-size: 12px;
+}
+
+.labelstyle {
+  font-size: large;
+  font-style: normal;
+  font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textfont {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+}
+
+.textBox,
+.textfont {
+  height: 32px;
+  width: 400px;
+  border-radius: 2px;
+  border: 0px solid rgb(0, 0, 0);
+  padding-left: 5px;
+}
+
+.SHC {
+  background-color: rgb(101, 129, 95);
+}
+
+/* For computer screens */
+@media screen and (min-width: 431px) {
+
+  .inputBox {
+    height: 48px;
+    width: 60vw;
+    font-size: large;
+    border-radius: 8px;
+    border: 1px solid rgb(221, 64, 64);
+    padding-left: 8px;
+  }
+
+  .form {
+    display: grid;
+    justify-content: left;
+    row-gap: 2px;
+    margin-left: 2vw;
+  }
+
+  .hotelsList {
+
+    padding-top: 1vw;
+  }
+
+  .HotelStyleVarient1,
+  .HotelStyleVarient2 {
+    cursor: pointer;
+    width: 75vw;
+    padding-left: 10px;
+    height: 32px;
+    margin-left: 2vw;
+    align-items: center;
+    align-content: center;
+  }
+
+  .HotelStyleVarient1,
+  .bgdark {
+    color: white;
+    background-color: rgb(101, 129, 95)
+  }
+
+  .HotelStyleVarient2,
+  .bglighter {
+    color: white;
+    background-color: rgb(178, 192, 176)
+  }
+
+  .Brandlogo {
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .LeftTop {
+    display: block;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(101, 129, 95);
+  }
+
+  .TopNavigatie {
+    margin: auto;
+    z-index: 200;
+    position: fixed;
+    text-align: left;
+    left: 200px;
+    top: 0px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .menucontainer {
+    text-align: left;
+    padding-left: 1vw;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .LeftMenu {
+    position: fixed;
+    border-color: black;
+    display: block;
+    height: 100%;
+    width: 200px;
+    background-color: rgb(101, 129, 95);
+  }
+
+  .Middle,
+  .App {
+    position: fixed;
+    margin-left: 200px;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(178, 192, 176);
+  }
+
+  textarea {
+    height: 100px;
+    width: 70vw;
+  }
+
+  label,
+  .textfont {
+    height: 48px;
+    font-weight: bold;
+  }
+
+  input,
+  .textfont {
+    height: 32px;
+    width: 70vw;
+
+  }
+
+  .MenuItem {
+    z-index: 201;
+  }
+
+  .NavDropdownItem {
+    background-color: rgb(255, 255, 255);
+  }
+  .formElement
+  { 
+    height: 50px;
+    vertical-align: top;
+  }
+  .small_button{
+    padding-top: 1vw;
+    text-align: center;
+    vertical-align: middle;
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+input{
+  width: 60vw;
+}
+label{
+  width: 200px;
+  text-align: right;
+  padding-right: 5px;
+}
+.spacer{height:20px}
+}
+
+/* for phones */
+@media screen and (max-width: 435px) {
+
+  .inputBox {
+    height: 48px;
+    width: 95vw;
+    font-size: large;
+    border-radius: 8px;
+    border: 1px solid rgb(221, 64, 64);
+    padding-left: 8px;
+  }
+
+  .form {
+    display: grid;
+    justify-content: left;
+    row-gap: 2px;
+    margin-left: 1vw;
+  }
+
+  .Brandlogo {
+    visibility: visible;
+  }
+
+  .LeftTop {
+    visibility: hidden;
+    display: block;
+    height: 50px;
+    width: 200px;
+  }
+
+  .TopNavigatie {
+    z-index: 199;
+    text-align: left;
+    margin-bottom: 20px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(101, 129, 95);
+    padding-right: 10px;
+    padding-left: 10px;
+
+  }
+
+  .menucontainer {
+    text-align: right;
+    padding-left: 1vw;
+    border-radius: 0px;
+    background-color: rgb(178, 192, 176);
+  }
+
+  .LeftMenu {
+    visibility: hidden;
+    width: 0px
+  }
+
+  .Middle,
+  .App {
+    position: absolute;
+    z-index: 0;
+    margin-left: 0px;
+    padding-left: 5px;
+    padding-top: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(178, 192, 176);
+  }
+
+  .LeftTop {
+    display: relative;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(101, 129, 95);
+  }
+
+  textarea,
+  .textfont {
+    height: 100px;
+    width: 95vw;
+  }
+
+  label,
+  .textfont {
+    padding-top: 15px;
+    font-weight: normal;
+  }
+
+  input,
+  .textfont {
+    height: 32px;
+    width: 95vw;
+    font-weight: normal;
+  }
+
+  .Password {
+    height: 32px;
+    width: 95vw;
+    font-weight: normal;
+
+  }
+
+  .MenuItem {
+    padding-top: 0px;
+  }
+
+  .NavDropdownItem {
+    z-index: 200;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .Nav {
+    background-color: rgb(255, 255, 255);
+  }
+  .formElement
+  { 
+    height: 40px;
+    vertical-align: top;
+  }
+  
+  .small_button{
+    padding-top: 1vw;
+    text-align: center;
+    vertical-align: middle;
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+input{
+  width: 60vw;
+}
+label{
+  width: 30vw;
+}
+.spacer{height:20px}
+
+}
