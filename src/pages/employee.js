@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './css/employee.css';
+import '../App.css';
 
 import { sendemployeedata, getemployees } from "../dbconnector/connector";
 
@@ -24,7 +25,7 @@ const ConstructEmployeePage = () => {
 
         if (divlist === null) {
 
-            const upperdiv = document.getElementById("upperdiv");
+            const upperdiv = document.getElementById("main");
             divlist = document.createElement("div");
             divlist.id = "list"
             
@@ -58,6 +59,27 @@ const ConstructEmployeePage = () => {
             
         }
 
+         /* #region  creating headings */
+         const employediv = document.createElement("div")
+         divlist.appendChild(employediv)
+
+
+         const EMP_ID_div = document.createElement("p")
+         EMP_ID_div.innerText = "ID"
+         employediv.appendChild(EMP_ID_div)
+
+         const name = document.createElement("p")
+         employediv.appendChild(name)
+         name.innerText = "Fullname"
+
+         const dateElement = document.createElement("p")
+         dateElement.innerText = "phone"
+         employediv.appendChild(dateElement);
+
+         employediv.className = "tableheader"
+
+         /* #endregion */
+
 
 
         list.forEach((element, index) => {
@@ -82,7 +104,7 @@ const ConstructEmployeePage = () => {
             // cityline.innerText = "City: " + element.city + ", " + element.country
             // employediv.appendChild(cityline)
             const phone = document.createElement("p")
-            phone.innerText = "Phone: " + element.Number
+            phone.innerText = element.Number
             employediv.appendChild(phone)
 
             //dinamicly add classname
@@ -102,7 +124,7 @@ const ConstructEmployeePage = () => {
 
 
     return (
-        <div id="upperdiv">
+        <div id="main">
         </div>
     )
 
@@ -133,7 +155,7 @@ const Addemployee = () => {
     }
 
     return (
-        <>
+        <div id="main">
             <form className="form" onSubmit={onSubmit}>
                 <div className="spacer"></div>
                 <div className="formElement">
@@ -204,7 +226,7 @@ const Addemployee = () => {
                     <input type='submit' ></input>
                 </div>
             </form>
-        </>
+        </div>
     )
 }
 export { ConstructEmployeePage, Addemployee }

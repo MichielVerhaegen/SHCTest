@@ -1,11 +1,12 @@
+import '../App.css';
 import React from "react"
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './css/createhotel.css';
-import './css/hotelhotellist.css';
+import hotelcss from './css/hotelhotellist.module.css';
 import { sendhoteldata, getallhotels, gethotel, getcontract } from "../dbconnector/connector";
 import { useParams } from "react-router-dom";
 import { pdfjs } from 'react-pdf';
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -30,7 +31,7 @@ const Createhotel = () => {
     return (
         <>
 
-            <div>
+            <div id="main">
                 <form className="form" onSubmit={onSubmit}>
                     <div className="formchild">
                         <label>
@@ -70,7 +71,7 @@ const Viewhotels = () => {
 
     return (
         <>
-            <div id="upperdiv">
+            <div id="main">
 
 
             </div>
@@ -88,7 +89,7 @@ const Createhotelslist = (hotellist, navigate) => {
         
         listForHotels.id = "hotelsList";
     
-        const upperdiv = document.getElementById("upperdiv");
+        const upperdiv = document.getElementById("main");
 
 
         //create zoekbalk en voegtoe
@@ -111,7 +112,21 @@ const Createhotelslist = (hotellist, navigate) => {
     }
 
 
+     /* #region  creating headings */
+     const employediv = document.createElement("div")
+     listForHotels.appendChild(employediv)
 
+
+     const EMP_ID_div = document.createElement("p")
+     EMP_ID_div.innerText = "Name"
+     employediv.appendChild(EMP_ID_div)
+
+     const name = document.createElement("p")
+     employediv.appendChild(name)
+     name.innerText = "Description"
+     employediv.className = hotelcss.tableheader;
+
+     /* #endregion */
 
     hotellist.forEach((hotel, index) => {
 
@@ -120,17 +135,19 @@ const Createhotelslist = (hotellist, navigate) => {
         const nameP = document.createElement("p");
         nameP.innerText = hotel.Name ;
         hotellink.appendChild(nameP);
-        const namex = document.createElement("p");
-        namex.innerText = hotel.Description ;
-        hotellink.appendChild(namex);
+        const description = document.createElement("p");
+        description.innerText = hotel.Description ;
+        hotellink.appendChild(description);
+
+        
     
 
 
         //dinamicly add classname
         if (index % 2 === 0) {
-            hotellink.className = "HotelStyleVarient1"
+            hotellink.className = hotelcss.linkVarient1
         } else {
-            hotellink.className = "HotelStyleVarient2"
+            hotellink.className = hotelcss.linkVarient2
         }
         hotellink.addEventListener('click', function (e) {
             navigate("/hotels/" + hotel.Hotel_ID);

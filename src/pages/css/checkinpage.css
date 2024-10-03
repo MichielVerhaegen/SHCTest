@@ -1,3 +1,15 @@
+/* .tableheader {
+   display: grid;
+  grid-template-columns: 50px 200px 200px 200px; 
+
+}
+.linkVarient1,
+.linkVarient2 {
+   display: grid;
+  grid-template-columns: 50px 200px 200px 200px; 
+
+} */
+
 .showError {
   background-color: red;
   color: white;
@@ -8,9 +20,6 @@
   visibility: hidden;
 }
 
-#upperdiv {
-  overflow: scroll;
-}
 
 
 
@@ -31,29 +40,6 @@
 
 .list {
   padding-top: 3vw;
-}
-
-.linkVarient1,
-.linkVarient2 {
-  display: grid;
-  grid-template-columns: 50px 200px 200px 200px;
-  cursor: pointer;
-  width: 70vm;
-  padding: 1vw 1vw 1vw 1vw;
-  height: 6vw;
-  margin-left: 0.5vw;
-  align-items: center;
-  align-content: center;
-}
-
-.linkVarient1 {
-  color: white;
-  background-color: rgb(101, 129, 95);
-}
-
-.linkVarient2 {
-  color: white;
-  background-color: rgb(178, 192, 176);
 }
 
 

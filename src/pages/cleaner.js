@@ -4,6 +4,7 @@ import './css/createhotel.css';
 import './css/cleaner.css';
 import { getCookie } from '../dbconnector/checktoken'
 import { checkin } from "../dbconnector/connector";
+import '../App.css';
 
 
 
@@ -25,8 +26,8 @@ const Cleaner = () => {
     return (
         <>
 
-            <div id="upperdiv" className="Screendiv">
-                <header />
+            <div id="main" className="Screendiv">
+                <header><div id="checkintime" className="checkinTime"></div></header>
                 <article>
                     <div className="buttoncontainer">
                         <div className="box">My Cleaning Jobs</div>
@@ -52,14 +53,14 @@ const Cleaner = () => {
                         <div className="picto"><img src="img/Ico_MyHoliday.png" alt="buttonlogo" height={30} /></div>
                     </div>
                 </article>
-                <footer className="checkin_out">
-                    <a type="button" onClick={()=>CheckIn()} className="a_in_out">
-                        <div id="checkintime"></div>
-                        <div className="box" >Check in/out</div>
-                        <div className="divider_in_out"></div>
-                        <div className="picto"><img src="img/ico_CheckIn_Out.png" alt="buttonlogo" height={30} /></div>
-                    </a>
-                </footer>
+                <a type="button" onClick={()=>CheckIn()} className="a_in_out">
+                    <footer className="checkin_out">
+                            <div className="box" >Check in/out</div>
+                            <div className="divider_in_out"></div>
+                            <div className="picto"><img src="img/ico_CheckIn_Out.png" alt="buttonlogo" height={30} /></div>
+                    </footer>
+                </a>
+
             </div>
             {/* <input className={'inputButton'} type="button" value={'Request Holiday'} />
             <input className={'inputButton'} type="button" value={'My Cleaning jobs'} /> */}

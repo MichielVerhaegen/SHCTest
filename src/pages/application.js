@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './css/application.css';
 import Navigatie from "./nav";
+import '../App.css';
 
 //example
 const Application = (props) => {

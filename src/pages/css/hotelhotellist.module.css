@@ -1,0 +1,45 @@
+
+.tableheader {
+    display: grid;
+   grid-template-columns: 200px 200px 200px 200px; 
+   font-weight: bold;
+   background-color: rgb(88, 105, 95);
+   border-width: 1px;
+   border-color: black;
+   width: 70vm;
+   padding: 2vw 1vw 1vw 1vw;
+   height: 45px;
+   margin-left: 0.5vw;
+   align-items: center;
+   align-content: center;
+  
+  }
+
+  .linkVarient1,
+  .linkVarient2 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    cursor: pointer;
+    width: 70vm;
+    padding: 2vw 1vw 1vw 1vw;
+    border-width: 0px 1px 1px 2px;
+    border-color: black;
+    height: 45px;
+    margin-left: 0.5vw;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .linkVarient1 {
+    color: white;
+    
+    background-color: rgb(101, 129, 95);
+  }
+  
+  .linkVarient2 {
+    color: rgb(101, 129, 95);
+    font-weight: bolder;
+    background-color: rgb(178, 192, 176);
+  }
+  
+  

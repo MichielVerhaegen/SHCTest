@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import { useParams } from "react-router-dom";
+import '../App.css';
 
 const MyData = () => {
     const navigate = useNavigate();

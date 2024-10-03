@@ -1,8 +1,11 @@
+import '../App.css';
+
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { retrieveCheckinData } from '../dbconnector/connector'
 import { getCookie } from '../dbconnector/checktoken'
 import './css/checkinpage.css';
+
 
 const setErrorMessage = (message) => {
     const errormessage = document.getElementById("errorMessage");
@@ -81,7 +84,7 @@ const Constructcheckinpage = () => {
         //this so that the data is not dupplicated
         if (divlist === null) {
 
-            const upperdiv = document.getElementById("upperdiv");
+            const upperdiv = document.getElementById("main");
             divlist = document.createElement("div");
             divlist.id = "list"
 
@@ -115,7 +118,7 @@ const Constructcheckinpage = () => {
 
         }
 
-                    /* #region  creating headings */
+         /* #region  creating headings */
                     const employediv = document.createElement("div")
                     divlist.appendChild(employediv)
         
@@ -135,7 +138,8 @@ const Constructcheckinpage = () => {
                     const timeElement = document.createElement("p");
                     timeElement.innerText = " Time"
                     employediv.appendChild(timeElement);
-                    employediv.className = "linkVarient2"
+                    employediv.className = "tableheader"
+                    dateElement.className="numberalign"
         
                     /* #endregion */
         //create a list item for every element in the received array
@@ -157,12 +161,13 @@ const Constructcheckinpage = () => {
             const dateTime = new Date(element.loginDateTime)
 
             const dateElement = document.createElement("p")
-            dateElement.innerText = "Date: " + dateTime.toLocaleDateString();
+            dateElement.innerText = dateTime.toLocaleDateString();
             employediv.appendChild(dateElement);
 
             const timeElement = document.createElement("p");
-            timeElement.innerText = " Time: " + dateTime.toLocaleTimeString();
+            timeElement.innerText = dateTime.toLocaleTimeString();
             employediv.appendChild(timeElement);
+            dateElement.className="numberalign"
 
             //dynamicaly add classname
             if (index % 2 === 0) {
@@ -181,7 +186,7 @@ const Constructcheckinpage = () => {
 
 
     return (
-        <div id="upperdiv">
+        <div id="main">
             <div id="errorMessage"></div>
 
 

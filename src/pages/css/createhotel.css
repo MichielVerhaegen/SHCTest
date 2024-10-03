@@ -1,48 +1,37 @@
+/* .tableheader {
+  
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+}
 
+.linkVarient1,
+.linkVarient2 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
 
+} */
 
-#Zoekbalk{
-   width: 350px;
-    margin-left: 2vw;
-    margin-bottom: 2vw;
-    margin-top: 1vw;
+#Zoekbalk {
+  width: 350px;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
 }
 
 .hotelsList {
   padding-top: 3vw;
 }
 
-.HotelStyleVarient1,
-.HotelStyleVarient2 {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  cursor: pointer;
-  width: 70vm;
-  padding: 1vw 1vw 1vw 1vw;
-  height: 6vw;
+
+
+.pdferror {
+  color: red;
+  background-color: lightcoral;
+  width: 10vw;
+  border-radius: 5pt;
+  padding: 3px 3px 3px 3px;
+  border: solid;
   margin-left: 0.5vw;
-  align-items: center;
-  align-content:center;
-}
-
-.HotelStyleVarient1 {
-  color: white;
-  background-color: rgb(101, 129, 95)
-}
-
-.HotelStyleVarient2 {
-  color: white;
-  background-color: rgb(178, 192, 176)
-}
-
-.pdferror{
-    color: red;
-    background-color: lightcoral;
-    width: 10vw;
-    border-radius: 5pt;
-    padding: 3px 3px 3px 3px;
-    border: solid;
-    margin-left: 0.5vw;
 }
 
 /* #hotelcontract{
@@ -65,7 +54,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -83,7 +72,7 @@
 .button-3:hover {
   background-color: #2c974b;
 }
-#hotelcontract{
-    display: grid;
-}
 
+#hotelcontract {
+  display: grid;
+}

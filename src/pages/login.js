@@ -67,7 +67,11 @@ const Login = (props) => {
 
         props.setEmail(email);
         props.setLoggedIn(true);
-        navigate("/home")
+        if(body.account.rights ===2){
+          navigate("/home")
+        }else if(body.account.rights ===1){
+          navigate("/cleaner")
+        }
       } else {
 
         setPasswordError(body.errormessage + " " + body.status)

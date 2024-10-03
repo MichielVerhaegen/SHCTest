@@ -19,13 +19,15 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [email, setEmail] = useState('')
 
-  const tokenresponse = checkloggedinstatus(setLoggedIn)
+  const tokenresponse = checkloggedinstatus()
+  
   tokenresponse.then(response => {
-
     if (response) {
-
       setEmail(response);
       setLoggedIn(true);
+    }else{
+        setLoggedIn(false);
+        setEmail("");
     }
 
   })
@@ -33,12 +35,11 @@ function App() {
     <>
 
       <div>
-        <div className="LeftTop" href="\home"><img src="./img/logo_stars.png" alt="" /></div>
+        
         <div className="TopNavigatie"><Navigatie></Navigatie></div>
-      </div>
-      <div>
         <div className="LeftMenu">
           {/* <Menu></Menu> */}
+          <div className="LeftTop" href="\home"><a href="/" ><img src="./img/logo_stars.png" alt="" /></a></div>
         </div>
       </div>
       <div className="App" id="App">
@@ -48,7 +49,7 @@ function App() {
               path="/"
               element={<Startpage email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
             />
-            <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+            <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />            
             <Route path="/home" element={<Application loggedIn={loggedIn} email={email} />} />
             <Route path="/createhotel" element={<Createhotel loggedIn={loggedIn} email={email} />} />
             <Route path="/hotels" element={<Viewhotels />} />

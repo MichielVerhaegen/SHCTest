@@ -111,7 +111,62 @@ div {
     padding-top: 1vw;
   }
 
-  .HotelStyleVarient1,
+
+  .tableheader {
+    grid-column-gap: 10px;
+    display: grid;
+    grid-template-columns: 50px 200px 200px 200px;
+    font-weight: bold;
+    background-color: rgb(88, 105, 95);
+    border-width: 1px;
+    border-color: black;
+    width: 70vm;
+    padding: 2vw 1vw 1vw 1vw;
+    height: 45px;
+    margin-left: 0.5vw;
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .linkVarient1,
+  .linkVarient2 {
+    display: grid;
+    grid-template-columns: 50px 200px 200px 200px;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    cursor: pointer;
+    width: 70vm;
+    padding: 2vw 1vw 1vw 1vw;
+    border-width: 0px 1px 1px 2px;
+    border-color: black;
+    height: 45px;
+    margin-left: 0.5vw;
+    text-align: left;
+    align-content: center;
+  }
+
+  .numberalign{
+    text-align: right;
+  }
+
+
+  .linkVarient1 {
+    color: white;
+
+    background-color: rgb(101, 129, 95);
+  }
+
+  .linkVarient2 {
+    color: rgb(101, 129, 95);
+    font-weight: bolder;
+    background-color: rgb(178, 192, 176);
+  }
+
+
+
+
+  /* .HotelStyleVarient1,
   .HotelStyleVarient2 {
     cursor: pointer;
     width: 75vw;
@@ -132,7 +187,7 @@ div {
   .bglighter {
     color: white;
     background-color: rgb(178, 192, 176)
-  }
+  } */
 
   .Brandlogo {
     visibility: hidden;
@@ -140,7 +195,7 @@ div {
   }
 
   .LeftTop {
-    display: block;
+    display: fixed;
     height: 50px;
     width: 200px;
     background-color: rgb(101, 129, 95);
@@ -172,15 +227,30 @@ div {
     background-color: rgb(101, 129, 95);
   }
 
+  body {
+    background-color: rgb(178, 192, 176);
+  }
+
   .Middle,
   .App {
-    position: fixed;
+    position: block;
     margin-left: 200px;
-    margin-top: 0px;
+
     padding-left: 0px;
+    padding-right: 10px;
     padding-top: 10px;
     height: 100%;
-    width: 100%;
+    background-color: rgb(178, 192, 176);
+  }
+
+  #main {
+    position: block;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 100%;
     background-color: rgb(178, 192, 176);
   }
 
@@ -209,28 +279,34 @@ div {
   .NavDropdownItem {
     background-color: rgb(255, 255, 255);
   }
-  .formElement
-  { 
+
+  .formElement {
     height: 50px;
     vertical-align: top;
   }
-  .small_button{
+
+  .small_button {
     padding-top: 1vw;
     text-align: center;
     vertical-align: middle;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-}
-input{
-  width: 60vw;
-}
-label{
-  width: 200px;
-  text-align: right;
-  padding-right: 5px;
-}
-.spacer{height:20px}
+  }
+
+  input {
+    width: 60vw;
+  }
+
+  label {
+    width: 200px;
+    text-align: right;
+    padding-right: 5px;
+  }
+
+  .spacer {
+    height: 20px
+  }
 }
 
 /* for phones */
@@ -288,13 +364,14 @@ label{
   }
 
   .Middle,
-  .App {
+  .App ,
+  #main{
     position: absolute;
     z-index: 0;
     margin-left: 0px;
     padding-left: 5px;
     padding-top: 10px;
-    height: 100%;
+    height: 90%;
     width: 100%;
     background-color: rgb(178, 192, 176);
   }
@@ -316,6 +393,54 @@ label{
   .textfont {
     padding-top: 15px;
     font-weight: normal;
+  }
+  .tableheader {
+    grid-column-gap: 10px;
+    display: grid;
+    grid-template-columns: 50px 100px 100px 100px;
+    font-weight: bold;
+    background-color: rgb(88, 105, 95);
+    border-width: 1px;
+    border-color: black;
+    width: 70vm;
+    padding: 2vw 1vw 1vw 1vw;
+    height: 45px;
+    margin-left: 0.5vw;
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .linkVarient1,
+  .linkVarient2 {
+    display: grid;
+    grid-template-columns: 50px 100px 100px 100px;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    cursor: pointer;
+    padding: 2vw 1vw 1vw 1vw;
+    border-width: 0px 1px 1px 2px;
+    border-color: black;
+    margin-left: 0.5vw;
+    text-align: left;
+    align-content: center;
+  }
+
+  .numberalign{
+    text-align: right;
+  }
+
+
+  .linkVarient1 {
+    color: white;
+
+    background-color: rgb(101, 129, 95);
+  }
+
+  .linkVarient2 {
+    color: rgb(101, 129, 95);
+    font-weight: bolder;
+    background-color: rgb(178, 192, 176);
   }
 
   input,
@@ -344,26 +469,31 @@ label{
   .Nav {
     background-color: rgb(255, 255, 255);
   }
-  .formElement
-  { 
+
+  .formElement {
     height: 40px;
     vertical-align: top;
   }
-  
-  .small_button{
+
+  .small_button {
     padding-top: 1vw;
     text-align: center;
     vertical-align: middle;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-}
-input{
-  width: 60vw;
-}
-label{
-  width: 30vw;
-}
-.spacer{height:20px}
+  }
+
+  input {
+    width: 60vw;
+  }
+
+  label {
+    width: 30vw;
+  }
+
+  .spacer {
+    height: 20px
+  }
 
 }

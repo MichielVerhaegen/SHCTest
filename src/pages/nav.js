@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { checktoken } from '../dbconnector/checktoken';
+import '../App.css';
 
 
 
@@ -89,12 +90,12 @@ const Navigatie = () => {
 
         <Navbar expand="lg" fixed='top' className='TopNavigatie' >
 
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <img className='Brandlogo'
               src="/img/Logo_stars.png"
 
               alt="SHC logo"
-              href="/"
+              
             />
           </Navbar.Brand>
           <Navbar.Brand href="#home">
@@ -143,7 +144,7 @@ const Navigatie = () => {
       <header>
         <Navbar expand="lg" fixed='top' className='TopNavigatie' >
 
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/cleaner">
             <img className='Brandlogo'
               src="/img/Logo_stars.png"
 

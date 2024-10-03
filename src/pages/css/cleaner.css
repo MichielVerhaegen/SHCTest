@@ -1,4 +1,13 @@
+.checkinTime
+{
+    margin-left: 8px;
+    margin-right:10px;
+    background-color:rgb(193,123,42);
 
+    padding-left: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
 /* For screens */
  @media screen and (min-width: 431px) {
