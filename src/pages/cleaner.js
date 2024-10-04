@@ -42,11 +42,15 @@ const Cleaner = () => {
                             <div className="picto"><img src="img/Ico_MyData.png" alt="buttonlogo" height={30} /></div>
                         </a>
                     </div>
-                    <div className="buttoncontainer">
+                    
+                    <div className="buttoncontainer" >
+                    <a href="http://78.20.36.241:9000/1726680777843Testcontract.pdf" target="_blank" classname="pointer">
                         <div className="box">My Contract</div>
                         <div className="divider"></div>
                         <div className="picto"><img src="img/Ico_MyContract.png" alt="buttonlogo" height={30} /></div>
+                        </a>
                     </div>
+                    
                     <div className="buttoncontainer">
                         <div className="box" >Request Holiday</div>
                         <div className="divider"></div>
