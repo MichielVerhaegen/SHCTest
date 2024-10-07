@@ -1,5 +1,6 @@
 {
   "name": "hsc",
+  "homepage":"http://test.myshc.net/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
