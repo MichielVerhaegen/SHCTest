@@ -10,7 +10,7 @@ const checkloggedinstatus = async (setLoggedIn) => {
 
     return response.then(response => {
       if (response.status === 200) {
-        return response.email
+        return {email:response.email,rights:response.Rights}
       } else {
         setLoggedIn(false)
         return false

@@ -18,16 +18,23 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false)
   const [email, setEmail] = useState('')
+  const [rights, setRights] = useState('')
 
   const tokenresponse = checkloggedinstatus()
-  
+
   tokenresponse.then(response => {
     if (response) {
-      setEmail(response);
-      setLoggedIn(true);
-    }else{
+      if (response.email) {
+        setRights(response.rights)
+        setEmail(response.email);
+        setLoggedIn(true);
+      } else {
         setLoggedIn(false);
         setEmail("");
+      }
+    } else {
+      setLoggedIn(false);
+      setEmail("");
     }
 
   })
@@ -35,7 +42,7 @@ function App() {
     <>
 
       <div>
-        
+
         <div className="TopNavigatie"><Navigatie></Navigatie></div>
         <div className="LeftMenu">
           {/* <Menu></Menu> */}
@@ -43,23 +50,23 @@ function App() {
         </div>
       </div>
       <div className="App" id="App">
-        
-          <Routes>
-            <Route
-              path="/"
-              element={<Startpage email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
-            />
-            <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />            
-            <Route path="/home" element={<Application loggedIn={loggedIn} email={email} />} />
-            <Route path="/createhotel" element={<Createhotel loggedIn={loggedIn} email={email} />} />
-            <Route path="/hotels" element={<Viewhotels />} />
-            <Route path="/hotels/:id" element={<HotelView />} />
-            <Route path="/employees" element={<ConstructEmployeePage />} />
-            <Route path="/create-employee" element={<Addemployee />} />
-            <Route path="/cleaner" element={<Cleaner />} />
-            <Route path="/mydata" element={<MyData />} />
-            <Route path="/checkins" element={<Constructcheckinpage />} />
-          </Routes>
+
+        <Routes>
+          <Route
+            path="/"
+            element={<Startpage email={email} loggedIn={loggedIn} rights={rights} setLoggedIn={setLoggedIn} setRights={setRights} />}
+          />
+          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+          <Route path="/home" element={<Application loggedIn={loggedIn} email={email} />} />
+          <Route path="/createhotel" element={<Createhotel loggedIn={loggedIn} email={email} />} />
+          <Route path="/hotels" element={<Viewhotels />} />
+          <Route path="/hotels/:id" element={<HotelView />} />
+          <Route path="/employees" element={<ConstructEmployeePage />} />
+          <Route path="/create-employee" element={<Addemployee />} />
+          <Route path="/cleaner" element={<Cleaner />} />
+          <Route path="/mydata" element={<MyData />} />
+          <Route path="/checkins" element={<Constructcheckinpage />} />
+        </Routes>
       </div>
 
 

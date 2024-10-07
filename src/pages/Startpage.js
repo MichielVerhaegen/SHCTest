@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Startpage = (props) => {
-  const { loggedIn, email } = props
+  const { loggedIn, email, rights} = props
   const navigate = useNavigate()
 
   const onButtonClick = () => {
@@ -11,7 +11,15 @@ const Startpage = (props) => {
   }
 
   if (loggedIn) {
-    navigate("/home")
+    if(rights===1){
+      navigate("/cleaner")
+
+    }
+    if(rights===2){
+      navigate("/home")
+
+    }
+    
   }
   return (
     <div className="mainContainer">
